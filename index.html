@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<!-- Fig. 4.17: dropdown.html -->
+<!-- CSS drop-down menu. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>
+         海大壘球聯盟
+      </title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+      <!--<link rel="stylesheet" href="//Users/timsyu/作業/網頁程式設計/期末專案//css/font-awesome.min.css"> -->
+      <style type = "text/css">
+          p.top1{
+              background-color:#282828;
+              margin: 0;
+              padding: 0;
+          }
+	 
+	  h1				{  font-family:Franklin Gothic;
+                            color:White;
+                            margin: 0;
+                            padding: 0;
+
+							}
+      body            {
+          
+          margin: 0;
+          padding: 0; 
+      }
+         nav             { 
+						   }
+         nav ul          { display: none;
+                           list-style: none;
+                           margin: 0;
+                           padding: 0; }
+         nav:hover ul    { display: block; }
+         nav ul li       { border-top: 2px solid Navy;
+                           background-color: white;
+                           width: 100%;
+                           color: black; }
+         nav ul li:hover { background-color: PowderBlue; }
+         a               { text-decoration: none; }
+		 div.example {
+						   font-weight: bold;
+                           font-family:Comic Sans MS,arial,helvetica,sans-serif;
+                           color: white;
+                           border: 2px solid #00B2B2;
+                           text-align: center;
+                           background-color: #00B2B2;
+						   float:left;
+						   width: 16.666%;
+						   box-sizing: border-box;
+}
+      div.top1 {
+          background-color: #282828;
+          margin: 0;
+          padding: 0;
+          
+      }
+@media screen and (max-width: 600px)
+		 {
+			div.example {						   
+			font-weight: bold;
+            color: white;
+            border: 2px solid #00B2B2;
+            text-align: center;
+            background-color: #00B2B2;
+			float: middle;
+			width: 100%;
+			box-sizing: border-box;
+					}
+		}
+      </style>
+   </head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <body>
+       <div style="text-align:center;" class = "top1">
+           <p class = "top1"><br>
+           </p>
+           <img id = "school" style = "z-index:1; width:150px; height: 150px;" src = "海大校徽.gif">
+           <h1>海大壘球聯盟</h1>
+       </div>
+      <div class = "example">
+	  <i class="fas fa-bars"></i> 比分/賽程
+	  </div>
+	  <div class = "example">
+	  <i class="fas fa-signal"></i> 戰績
+	  </div>
+	  <div class = "example">
+	   <i class="fas fa-sitemap"></i> 球隊資訊
+      </nav>
+	  </div>
+	  <div class = "example">
+	  <i class="fas fa-address-card"></i> 球員資訊
+      </nav>
+	  </div>
+	  <div class = "example">
+	  <i class="fab fa-facebook-square"></i> FB粉專
+      </nav>
+	  </div>
+	  <div class = "example">
+	  <i class="fas fa-wrench"></i> 管理員專區
+      </nav>
+      
+	  </div>
+
+   </body>
+   
+</html>
+
