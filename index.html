@@ -72,7 +72,9 @@
 						   float:left;
 						   width: 16.666%;
 						   box-sizing: border-box;
-}
+         }
+      div.demo{
+      }
       div.top1 {
           background-color: #282828;
           margin: 0;
@@ -105,7 +107,11 @@
            document.getElementById("d").addEventListener("click",  d);
            document.getElementById("e").addEventListener("click",  e);
            document.getElementById("f").addEventListener("click",  f);
+           document.getElementById("school").addEventListener("click", school);
        }
+   function school(){
+       document.getElementById("demo").innerHTML = '<p>粉專最新貼文<br></p><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2Fposts%2F1893918180672674&width=500" width="500" height="731" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" align="middle"></iframe>';
+   }
    function a(){
        document.getElementById("demo").innerHTML="";
        var currentdate = new Date();
@@ -162,7 +168,9 @@
           <nav id = "f"; class="fas fa-wrench"> 管理員專區</nav>
       </nav>
 	  </div>
-      <div id = "demo">
+      <div id = "demo" align = "center">
+          <p>粉專最新貼文<br></p>
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2Fposts%2F1893918180672674&width=500" width="500" height="731" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" align="middle"></iframe>
       </div>
    </body>
    
