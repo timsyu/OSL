@@ -9,7 +9,6 @@
          海大壘球聯盟
       </title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-      <!--<link rel="stylesheet" href="//Users/timsyu/作業/網頁程式設計/期末專案//css/font-awesome.min.css"> -->
       <style type = "text/css">
           p.top1{
               background-color:#282828;
@@ -58,6 +57,13 @@
           padding: 0;
           
       }
+      div.b{
+          background-color: #E8E8E8;
+          width: 90%;
+          height: 450px;
+          margin: auto;
+          padding: 10px;
+      }
 @media screen and (max-width: 600px)
 		 {
 			div.example {						   
@@ -83,6 +89,7 @@
            document.getElementById("f").addEventListener("click",  f);
        }
    function a(){
+       document.getElementById("demo").innerHTML="";
        var currentdate = new Date();
        var year=currentdate.getFullYear();
        var date=currentdate.getDate();
@@ -93,8 +100,8 @@
    }
    function b(){
        document.getElementById("demo").innerHTML="";
-       
-       
+       document.getElementById("demo").innerHTML+="<p><br></p>";
+       document.getElementById("demo").innerHTML+="<div class = 'b'><p style = 'font-size:20px;>聯盟戰績</p>"
        
        
    }
@@ -136,9 +143,9 @@
 	  <div class = "example">
           <nav id = "f"; class="fas fa-wrench"> 管理員專區</nav>
       </nav>
-      
 	  </div>
-      <div id = "demo"></div>
+      <div id = "demo">
+      </div>
    </body>
    
 </html>
