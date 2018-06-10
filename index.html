@@ -84,6 +84,10 @@
       div.b{
           padding: 10px;
       }
+      dic.score{
+          width:80%;
+          background-color:gray;
+      }
 @media screen and (max-width: 600px)
 		 {
 			div.example {						   
@@ -114,12 +118,9 @@
    }
    function a(){
        document.getElementById("demo").innerHTML="";
-       var currentdate = new Date();
-       var year=currentdate.getFullYear();
-       var date=currentdate.getDate();
-       var month=Math.floor(currentdate.getMonth())+1 ;
-       var datetime=year+"/"+month+"/"+date;
-       document.getElementById("demo").innerHTML=datetime;
+       document.getElementById("demo").innerHTML+="<p><br></p>";
+       document.getElementById("demo").innerHTML+="<div id = 'score' class = 'score'>";
+       document.getElementById("score").innerHTML+="<p width = '80%'>已結束</p>";
        
    }
    function b(){
@@ -170,7 +171,7 @@
 	  </div>
       <div id = "demo" align = "center">
           <p>粉專最新貼文<br></p>
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2Fposts%2F1893918180672674&width=500" width="500" height="731" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" align="middle"></iframe>
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2Fposts%2F1893918180672674&width=500" width="450" height="731" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
       </div>
    </body>
    
