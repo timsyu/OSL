@@ -73,6 +73,40 @@
 		}
       </style>
    </head>
+   <script>
+       function start(){
+           document.getElementById("a").addEventListener("click",  a);
+           document.getElementById("b").addEventListener("click",  b);
+           document.getElementById("c").addEventListener("click",  c);
+           document.getElementById("d").addEventListener("click",  d);
+           document.getElementById("e").addEventListener("click",  e);
+           document.getElementById("f").addEventListener("click",  f);
+       }
+   function a(){
+       var currentdate = new Date();
+       var year=currentdate.getFullYear();
+       var date=currentdate.getDate();
+       var month=Math.floor(currentdate.getMonth())+1 ;
+       var datetime=year+"/"+month+"/"+date;
+       document.getElementById("demo").innerHTML=datetime;
+       
+   }
+   function b(){
+       document.getElementById("demo").innerHTML="";
+       
+       
+       
+       
+   }
+   function c(){}
+   function d(){}
+   function e(){}
+   function f(){
+       document.getElementById("demo").innerHTML="<input>";
+   }
+   window.addEventListener( "load", start, false );
+       </script>
+
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <body>
        <div style="text-align:center;" class = "top1">
@@ -82,29 +116,29 @@
            <h1>海大壘球聯盟</h1>
        </div>
       <div class = "example">
-	  <i class="fas fa-bars"></i> 比分/賽程
+          <nav id = "a"; class="fas fa-bars"> 比分/賽程</nav>
 	  </div>
 	  <div class = "example">
-	  <i class="fas fa-signal"></i> 戰績
+          <nav id = "b"; class="fas fa-signal"> 戰績</nav>
 	  </div>
 	  <div class = "example">
-	   <i class="fas fa-sitemap"></i> 球隊資訊
+          <nav id = "c"; class="fas fa-sitemap"> 球隊資訊</nav>
       </nav>
 	  </div>
 	  <div class = "example">
-	  <i class="fas fa-address-card"></i> 球員資訊
+          <nav id = "d"; class="fas fa-address-card"> 球員資訊</nav>
       </nav>
 	  </div>
 	  <div class = "example">
-	  <i class="fab fa-facebook-square"></i> FB粉專
+          <nav id = "e"; class="fab fa-facebook-square"> FB粉專</nav>
       </nav>
 	  </div>
 	  <div class = "example">
-	  <i class="fas fa-wrench"></i> 管理員專區
+          <nav id = "f"; class="fas fa-wrench"> 管理員專區</nav>
       </nav>
       
 	  </div>
-
+      <div id = "demo"></div>
    </body>
    
 </html>
