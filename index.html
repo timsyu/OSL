@@ -10,6 +10,28 @@
       </title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
       <style type = "text/css">
+          #customers {
+              font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+          }
+      
+      #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      
+      #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4CAF50;
+          color: white;
+      }
           p.top1{
               background-color:#282828;
               margin: 0;
@@ -60,7 +82,7 @@
       div.b{
           background-color: #E8E8E8;
           width: 90%;
-          height: 450px;
+          height: 610px;
           margin: auto;
           padding: 10px;
       }
@@ -101,9 +123,9 @@
    function b(){
        document.getElementById("demo").innerHTML="";
        document.getElementById("demo").innerHTML+="<p><br></p>";
-       document.getElementById("demo").innerHTML+="<div id = 'standing'class = 'b'><p style = 'font-size:20px;'>聯盟戰績</p>";
+       document.getElementById("demo").innerHTML+="<div id = 'standing'class = 'b'>";
        document.getElementById("standing").innerHTML+="<br>";
-       document.getElementById("standing").innerHTML+="馬彬彬安安";
+       document.getElementById("standing").innerHTML+="<table id='customers'><tr><th>排名</th><th>隊名</th><th>勝</th><th>敗</th><th>和</th><th>勝率</th><th>積分</th><th>得分</th><th>失分</th><th>得分差</th></tr><tr><td>1</td><td>河工</td><td>11</td><td>1</td><td>0</td><td>0.916</td><td>33</td><td>68</td><td>17</td><td>51</td></tr><tr><td>2</td><td>航管</td><td>10</td><td>2</td><td>0</td><td>0.833</td><td>30</td><td>76</td><td>27</td><td>49</td></tr><tr><td>3</td><td>運輸</td><td>9</td><td>3</td><td>0</td><td>0.750</td><td>27</td><td>73</td><td>38</td><td>35</td></tr><tr><td>4</td><td>機械</td><td>8</td><td>2</td><td>2</td><td>0.666</td><td>26</td><td>62</td><td>32</td><td>30</td></tr><tr><td>5</td><td>資工</td><td>8</td><td>3</td><td>1</td><td>0.666</td><td>25</td><td>47</td><td>49</td><td>8</td></tr><tr><td>6</td><td>商船</td><td>7</td><td>5</td><td>0</td><td>0.583</td><td>21</td><td>60</td><td>26</td><td>34</td></tr><tr><td>7</td><td>養殖</td><td>5</td><td>7</td><td>0</td><td>0.416</td><td>15</td><td>58</td><td>63</td><td>-5</td></tr><tr><td>8</td><td>海洋</td><td>4</td><td>8</td><td>0</td><td>0.333</td><td>12</td><td>45</td><td>60</td><td>-15</td></tr><tr><td>9</td><td>環漁</td><td>4</td><td>8</td><td>0</td><td>0.333</td><td>12</td><td>33</td><td>44</td><td>-11</td></tr><tr><td>10</td><td>輪機</td><td>3</td><td>8</td><td>1</td><td>0.250</td><td>10</td><td>50</td><td>70</td><td>-20</td></tr><tr><td>11</td><td>通訊</td><td>3</td><td>9</td><td>0</td><td>0.250</td><td>9</td><td>27</td><td>56</td><td>-29</td></tr><tr><td>12</td><td>造船</td><td>3</td><td>9</td><td>0</td><td>0.250</td><td>9</td><td>35</td><td>70</td><td>-35</td></tr><tr><td>13</td><td>電機</td><td>0</td><td>12</td><td>0</td><td>0.000</td><td>0</td><td>21</td><td>113</td><td>-92</td></tr></table>";
    }
    function c(){}
    function d(){}
