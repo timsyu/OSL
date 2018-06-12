@@ -85,7 +85,52 @@
           width:80%;
           background-color:gray;
       }
-      a               { text-decoration: none; }
+      a
+      {
+          text-decoration: none;
+      }
+      .button {
+          display: inline-block;
+          border-radius: 4px;
+          background-color: #008866;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 28px;
+          padding: 5px;
+          width: 130px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+      }
+      
+      .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+      }
+      
+      .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+      }
+      
+      .button:hover span {
+          padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+          opacity: 1;
+          right: 0;
+      }
+      select{
+          width:130px;
+      }
 @media screen and (max-width: 600px)
 		 {
 			div.example {						   
@@ -143,8 +188,9 @@
        sel+="<option value='11'>造船</option>";
        sel+="<option value='12'>河工</option>";
        sel+="<option value='13'>通訊</option>";
-       document.getElementById("demo").innerHTML="<p><br></p><form><select id='s'>"+sel+"</select></form><br>";
-       document.getElementById("demo").innerHTML+="<input type='button' id='go' value='確認' onclick = 'out()'>";
+       document.getElementById("demo").innerHTML="<p><br></p><form><select  id='s'>"+sel+"</select></form>";
+       document.getElementById("demo").innerHTML+="<button class='button' id = 'go'onclick = 'out()' style='vertical-align:middle'><span>確認</span></button>";
+       
        document.getElementById("demo").innerHTML+="<div id='out'></div>";
        
    }
