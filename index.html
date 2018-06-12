@@ -10,7 +10,7 @@
           #customers {
               font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
               border-collapse: collapse;
-              width: 100%;
+              width: 90%;
           }
       
       #customers td, #customers th {
@@ -58,7 +58,7 @@
                            width: 100%;
                            color: black; }
          nav ul li:hover { background-color: PowderBlue; }
-         a               { text-decoration: none; }
+         nav a               {color:White; }
 		 div.example {
 						   font-weight: bold;
                            font-family:Comic Sans MS,arial,helvetica,sans-serif;
@@ -85,6 +85,7 @@
           width:80%;
           background-color:gray;
       }
+      a               { text-decoration: none; }
 @media screen and (max-width: 600px)
 		 {
 			div.example {						   
@@ -127,7 +128,36 @@
        document.getElementById("standing").innerHTML+="<br>";
        document.getElementById("standing").innerHTML+="<table id='customers'><tr><th>排名</th><th>隊名</th><th>勝</th><th>敗</th><th>和</th><th>勝率</th><th>積分</th><th>得分</th><th>失分</th><th>得分差</th></tr><tr><td>1</td><td>河工</td><td>11</td><td>1</td><td>0</td><td>0.916</td><td>33</td><td>68</td><td>17</td><td>51</td></tr><tr><td>2</td><td>航管</td><td>10</td><td>2</td><td>0</td><td>0.833</td><td>30</td><td>76</td><td>27</td><td>49</td></tr><tr><td>3</td><td>運輸</td><td>9</td><td>3</td><td>0</td><td>0.750</td><td>27</td><td>73</td><td>38</td><td>35</td></tr><tr><td>4</td><td>機械</td><td>8</td><td>2</td><td>2</td><td>0.666</td><td>26</td><td>62</td><td>32</td><td>30</td></tr><tr><td>5</td><td>資工</td><td>8</td><td>3</td><td>1</td><td>0.666</td><td>25</td><td>47</td><td>49</td><td>8</td></tr><tr><td>6</td><td>商船</td><td>7</td><td>5</td><td>0</td><td>0.583</td><td>21</td><td>60</td><td>26</td><td>34</td></tr><tr><td>7</td><td>養殖</td><td>5</td><td>7</td><td>0</td><td>0.416</td><td>15</td><td>58</td><td>63</td><td>-5</td></tr><tr><td>8</td><td>海洋</td><td>4</td><td>8</td><td>0</td><td>0.333</td><td>12</td><td>45</td><td>60</td><td>-15</td></tr><tr><td>9</td><td>環漁</td><td>4</td><td>8</td><td>0</td><td>0.333</td><td>12</td><td>33</td><td>44</td><td>-11</td></tr><tr><td>10</td><td>輪機</td><td>3</td><td>8</td><td>1</td><td>0.250</td><td>10</td><td>50</td><td>70</td><td>-20</td></tr><tr><td>11</td><td>通訊</td><td>3</td><td>9</td><td>0</td><td>0.250</td><td>9</td><td>27</td><td>56</td><td>-29</td></tr><tr><td>12</td><td>造船</td><td>3</td><td>9</td><td>0</td><td>0.250</td><td>9</td><td>35</td><td>70</td><td>-35</td></tr><tr><td>13</td><td>電機</td><td>0</td><td>12</td><td>0</td><td>0.000</td><td>0</td><td>21</td><td>113</td><td>-92</td></tr></table>";
    }
-   function c(){}
+   function c(){
+       
+       var sel="<option value='1'>資工</option>";
+       sel+="<option value='2'>商船</option>";
+       sel+="<option value='3'>運輸</option>";
+       sel+="<option value='4'>航管</option>";
+       sel+="<option value='5'>電機</option>";
+       sel+="<option value='6'>輪機</option>";
+       sel+="<option value='7'>海洋</option>";
+       sel+="<option value='8'>養殖</option>";
+       sel+="<option value='9'>環魚</option>";
+       sel+="<option value='10'>機械</option>";
+       sel+="<option value='11'>造船</option>";
+       sel+="<option value='12'>河工</option>";
+       sel+="<option value='13'>通訊</option>";
+       document.getElementById("demo").innerHTML="<p><br></p><form><select id='s'>"+sel+"</select></form><br>";
+       document.getElementById("demo").innerHTML+="<input type='button' id='go' value='確認' onclick = 'out()'>";
+       document.getElementById("demo").innerHTML+="<div id='out'></div>";
+       
+   }
+   function out(){
+       var s=document.getElementById("s");
+       var p=document.getElementById("out");
+       switch(s.value){
+           case 1:
+           break;
+       }
+       p.innerHTML="<table id = 'customers'><tr><th>排名</th><th>積分</th><th>打擊率</th><th>防禦率</th></tr><tr></tr></table>"
+       
+   }
    function d(){}
    function e(){}
    function f(){
@@ -159,7 +189,7 @@
       </nav>
 	  </div>
 	  <div class = "example">
-          <nav id = "e"; class="fab fa-facebook-square"> FB粉專</nav>
+          <nav id = "e"; class="fab fa-facebook-square"><a href="https://www.facebook.com/ntousoftball/"target="_blank"> FB粉專</a></nav>
       </nav>
 	  </div>
 	  <div class = "example">
