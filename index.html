@@ -1,257 +1,354 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset = "utf-8">
-      <title>
-         海大壘球聯盟
-      </title>
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-      <style type = "text/css">
-          #customers {
-              font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-              border-collapse: collapse;
-              width: 90%;
-          }
-      
-      #customers td, #customers th {
-          border: 1px solid #ddd;
-          padding: 8px;
-      }
-      
-      #customers tr:nth-child(even){background-color: #f2f2f2;}
-      
-      #customers tr:hover {background-color: #ddd;}
-      
-      #customers th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-          text-align: left;
-          background-color: #009494;
-          color: white;
-      }
-          p.top1{
-              background-color:#282828;
-              margin: 0;
-              padding: 0;
-          }
-	 
-	  h1				{  font-family:Franklin Gothic;
-                            color:White;
-                            margin: 0;
-                            padding: 0;
 
-							}
-      body            {
-          
-          margin: 0;
-          padding: 0; 
-      }
-         nav             { 
-						   }
-         nav ul          { display: none;
-                           list-style: none;
-                           margin: 0;
-                           padding: 0; }
-         nav:hover ul    { display: block; }
-         nav ul li       { border-top: 2px solid Navy;
-                           background-color: white;
-                           width: 100%;
-                           color: black; }
-         nav ul li:hover { background-color: PowderBlue; }
-         nav a               {color:White; }
-         
-		 div.example {
-						   font-weight: bold;
-                           font-family:Comic Sans MS,arial,helvetica,sans-serif;
-                           color: white;
-                           font-size:20px;
-                           border: 2px solid #00B2B2;
-                           text-align: center;
-                           background-color: #00B2B2;
-						   float:left;
-                           padding: 10px;
-						   width: 16.666%;
-                           box-sizing: border-box;
-         }
-      div.example:hover:not(.active) {
-          background-color: #00A3A3;
-      }
-      div.demo{
-      }
-      div.top1 {
-          background-color: #282828;
-          margin: 0;
-          padding: 0;
-          
-      }
-      div.b{
-          padding: 10px;
-      }
-      div.score{
-          width:80%;
-          background-color:gray;
-      }
-      a
-      {
-          text-decoration: none;
-      }
-      .button {
-          display: inline-block;
-          border-radius: 4px;
-          background-color: #008866;
-          border: none;
-          color: #FFFFFF;
-          text-align: center;
-          font-size: 28px;
-          padding: 5px;
-          width: 130px;
-          transition: all 0.5s;
-          cursor: pointer;
-          margin: 5px;
-      }
-      
-      .button span {
-          cursor: pointer;
-          display: inline-block;
-          position: relative;
-          transition: 0.5s;
-      }
-      
-      .button span:after {
-          content: '\00bb';
-          position: absolute;
-          opacity: 0;
-          top: 0;
-          right: -20px;
-          transition: 0.5s;
-      }
-      
-      .button:hover span {
-          padding-right: 25px;
-      }
-      
-      .button:hover span:after {
-          opacity: 1;
-          right: 0;
-      }
-      select{
-          width:130px;
-      }
-@media screen and (max-width: 600px)
-		 {
-			div.example {						   
-			font-weight: bold;
+<head>
+    <meta charset="utf-8">
+    <title>
+        海大壘球聯盟
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style type="text/css">
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            font-size: 20px;
+            width: 90%;
+        }
+        
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+        
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #009494;
             color: white;
+        }
+        
+        p.top1 {
+            background-color: #282828;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-family: Franklin Gothic;
+            color: White;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {}
+        
+        nav ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav:hover ul {
+            display: block;
+        }
+        
+        nav ul li {
+            border-top: 2px solid Navy;
+            background-color: white;
+            width: 100%;
+            color: black;
+        }
+        
+        nav ul li:hover {
+            background-color: PowderBlue;
+        }
+        
+        nav a {
+            color: White;
+        }
+        
+        div.example {
+            font-weight: bold;
+            font-family: Comic Sans MS, arial, helvetica, sans-serif;
+            color: white;
+            font-size: 20px;
             border: 2px solid #00B2B2;
             text-align: center;
             background-color: #00B2B2;
-			float: middle;
-			width: 100%;
-			box-sizing: border-box;
-					}
-		}
-      </style>
-   </head>
-   <script>
-       function start(){
-           document.getElementById("a").addEventListener("click",  a);
-           document.getElementById("b").addEventListener("click",  b);
-           document.getElementById("c").addEventListener("click",  c);
-           document.getElementById("d").addEventListener("click",  d);
-           document.getElementById("e").addEventListener("click",  e);
-           document.getElementById("f").addEventListener("click",  f);
-           document.getElementById("school").addEventListener("click", school);
-       }
-   function school(){
-       document.getElementById("demo").innerHTML = '<p><br></p><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> ';
-   }
-   function a(){
-       document.getElementById("demo").innerHTML="";
-       document.getElementById("demo").innerHTML+="<p><br></p>";
-       document.getElementById("demo").innerHTML+="<div id = 'score' class = 'score'>";
-       document.getElementById("score").innerHTML+="<p width = '80%'>已結束</p>";
-       
-   }
-   function b(){
-       document.getElementById("demo").innerHTML="";
-       document.getElementById("demo").innerHTML+="<p><br></p>";
-       document.getElementById("demo").innerHTML+="<div id = 'standing'class = 'b'>";
-       document.getElementById("standing").innerHTML+="<br>";
-       document.getElementById("standing").innerHTML+="<table id='customers'><tr><th>排名</th><th>隊名</th><th>勝</th><th>敗</th><th>和</th><th>勝率</th><th>積分</th><th>得分</th><th>失分</th><th>得分差</th></tr><tr><td>1</td><td>河工</td><td>11</td><td>1</td><td>0</td><td>0.916</td><td>33</td><td>68</td><td>17</td><td>51</td></tr><tr><td>2</td><td>航管</td><td>10</td><td>2</td><td>0</td><td>0.833</td><td>30</td><td>76</td><td>27</td><td>49</td></tr><tr><td>3</td><td>運輸</td><td>9</td><td>3</td><td>0</td><td>0.750</td><td>27</td><td>73</td><td>38</td><td>35</td></tr><tr><td>4</td><td>機械</td><td>8</td><td>2</td><td>2</td><td>0.666</td><td>26</td><td>62</td><td>32</td><td>30</td></tr><tr><td>5</td><td>資工</td><td>8</td><td>3</td><td>1</td><td>0.666</td><td>25</td><td>47</td><td>49</td><td>8</td></tr><tr><td>6</td><td>商船</td><td>7</td><td>5</td><td>0</td><td>0.583</td><td>21</td><td>60</td><td>26</td><td>34</td></tr><tr><td>7</td><td>養殖</td><td>5</td><td>7</td><td>0</td><td>0.416</td><td>15</td><td>58</td><td>63</td><td>-5</td></tr><tr><td>8</td><td>海洋</td><td>4</td><td>8</td><td>0</td><td>0.333</td><td>12</td><td>45</td><td>60</td><td>-15</td></tr><tr><td>9</td><td>環漁</td><td>4</td><td>8</td><td>0</td><td>0.333</td><td>12</td><td>33</td><td>44</td><td>-11</td></tr><tr><td>10</td><td>輪機</td><td>3</td><td>8</td><td>1</td><td>0.250</td><td>10</td><td>50</td><td>70</td><td>-20</td></tr><tr><td>11</td><td>通訊</td><td>3</td><td>9</td><td>0</td><td>0.250</td><td>9</td><td>27</td><td>56</td><td>-29</td></tr><tr><td>12</td><td>造船</td><td>3</td><td>9</td><td>0</td><td>0.250</td><td>9</td><td>35</td><td>70</td><td>-35</td></tr><tr><td>13</td><td>電機</td><td>0</td><td>12</td><td>0</td><td>0.000</td><td>0</td><td>21</td><td>113</td><td>-92</td></tr></table>";
-   }
-   function c(){
-       
-       var sel="<option value='1'>資工</option>";
-       sel+="<option value='2'>商船</option>";
-       sel+="<option value='3'>運輸</option>";
-       sel+="<option value='4'>航管</option>";
-       sel+="<option value='5'>電機</option>";
-       sel+="<option value='6'>輪機</option>";
-       sel+="<option value='7'>海洋</option>";
-       sel+="<option value='8'>養殖</option>";
-       sel+="<option value='9'>環魚</option>";
-       sel+="<option value='10'>機械</option>";
-       sel+="<option value='11'>造船</option>";
-       sel+="<option value='12'>河工</option>";
-       sel+="<option value='13'>通訊</option>";
-       document.getElementById("demo").innerHTML="<p><br></p><form><select  id='s'>"+sel+"</select></form>";
-       document.getElementById("demo").innerHTML+="<button class='button' id = 'go'onclick = 'out()' style='vertical-align:middle'><span>確認</span></button>";
-       
-       document.getElementById("demo").innerHTML+="<div id='out'></div>";
-       
-   }
-   function out(){
-       var s=document.getElementById("s");
-       var p=document.getElementById("out");
-       switch(s.value){
-           case 1:
-           break;
-       }
-       p.innerHTML="<table id = 'customers'><tr><th>排名</th><th>積分</th><th>打擊率</th><th>防禦率</th></tr><tr></tr></table>"
-       
-   }
-   function d(){}
-   function e(){}
-   function f(){
-       document.getElementById("demo").innerHTML="<input>";
-   }
-   window.addEventListener( "load", start, false );
-       </script>
+            float: left;
+            padding: 10px;
+            width: 16.666%;
+            box-sizing: border-box;
+        }
+        
+        div.example:hover:not(.active) {
+            background-color: #00A3A3;
+        }
+        
+        div.demo {}
+        
+        div.top1 {
+            background-color: #282828;
+            margin: 0;
+            padding: 0;
+        }
+        
+        div.b {
+            padding: 10px;
+        }
+        
+        div.score {
+            width: 80%;
+            background-color: gray;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #008866;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 5px;
+            width: 130px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        select {
+            width: 130px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            div.example {
+                font-weight: bold;
+                color: white;
+                border: 2px solid #00B2B2;
+                text-align: center;
+                background-color: #00B2B2;
+                float: middle;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<script>
+    function start() {
+        document.getElementById("a1").addEventListener("click", a);
+        document.getElementById("b1").addEventListener("click", b);
+        document.getElementById("c1").addEventListener("click", c);
+        document.getElementById("d1").addEventListener("click", d);
+        document.getElementById("e1").addEventListener("click", e);
+        document.getElementById("f1").addEventListener("click", f);
+        document.getElementById("school").addEventListener("click", school);
+    }
 
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <body>
-       <div style="text-align:center;" class = "top1">
-           <p class = "top1"><br>
-           </p>
-           <img id = "school" style = "z-index:1; width:150px; height: 150px;" src = "海大校徽.gif" title="返回首頁">
-           <h1>海大壘球聯盟</h1>
-       </div>
-      <div class = "example">
-          <nav id = "a"; class="fas fa-bars"> 比分/賽程</nav>
-	  </div>
-	  <div class = "example">
-          <nav id = "b"; class="fas fa-signal"> 戰績</nav>
-	  </div>
-	  <div class = "example">
-          <nav id = "c"; class="fas fa-sitemap"> 球隊資訊</nav>
-      </nav>
-	  </div>
-	  <div class = "example">
-          <nav id = "d"; class="fas fa-address-card"> 球員資訊</nav>
-      </nav>
-	  </div>
-	  <div class = "example">
-          <nav id = "e"; class="fab fa-facebook-square"><a href="https://www.facebook.com/ntousoftball/"target="_blank"> FB粉專</a></nav>
-      </nav>
-	  </div>
-	  <div class = "example">
-          <nav id = "f"; class="fas fa-wrench"> 管理員專區</nav>
-      </nav>
-	  </div>
-      <div id = "demo" align = "center">
-          <p><br></p>
-          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>      </div>
-   </body>
-   
+    function school() {
+        document.getElementById("demo").innerHTML = '<p><br></p><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> ';
+    }
+
+    function a() {
+        document.getElementById("demo").innerHTML = "";
+        document.getElementById("demo").innerHTML += "<p><br></p>";
+        document.getElementById("demo").innerHTML += "<div id = 'score' class = 'score'>";
+        document.getElementById("score").innerHTML += "<p width = '80%'>已結束</p>";
+
+    }
+
+    function b() {
+        document.getElementById("demo").innerHTML = "";
+        document.getElementById("demo").innerHTML += "<p><br></p>";
+        document.getElementById("demo").innerHTML += "<div id = 'standing'class = 'b'>";
+        document.getElementById("standing").innerHTML += "<br>";
+        document.getElementById("standing").innerHTML += "<table id='customers'><tr><th>排名</th><th>隊名</th><th>勝</th><th>敗</th><th>和</th><th>勝率</th><th>積分</th><th>得分</th><th>失分</th><th>得分差</th></tr><tr><td>1</td><td>河工</td><td>11</td><td>1</td><td>0</td><td>0.916</td><td>33</td><td>68</td><td>17</td><td>51</td></tr><tr><td>2</td><td>航管</td><td>10</td><td>2</td><td>0</td><td>0.833</td><td>30</td><td>76</td><td>27</td><td>49</td></tr><tr><td>3</td><td>運輸</td><td>9</td><td>3</td><td>0</td><td>0.750</td><td>27</td><td>73</td><td>38</td><td>35</td></tr><tr><td>4</td><td>機械</td><td>8</td><td>2</td><td>2</td><td>0.666</td><td>26</td><td>62</td><td>32</td><td>30</td></tr><tr><td>5</td><td>資工</td><td>8</td><td>3</td><td>1</td><td>0.666</td><td>25</td><td>47</td><td>49</td><td>8</td></tr><tr><td>6</td><td>商船</td><td>7</td><td>5</td><td>0</td><td>0.583</td><td>21</td><td>60</td><td>26</td><td>34</td></tr><tr><td>7</td><td>養殖</td><td>5</td><td>7</td><td>0</td><td>0.416</td><td>15</td><td>58</td><td>63</td><td>-5</td></tr><tr><td>8</td><td>海洋</td><td>4</td><td>8</td><td>0</td><td>0.333</td><td>12</td><td>45</td><td>60</td><td>-15</td></tr><tr><td>9</td><td>環漁</td><td>4</td><td>8</td><td>0</td><td>0.333</td><td>12</td><td>33</td><td>44</td><td>-11</td></tr><tr><td>10</td><td>輪機</td><td>3</td><td>8</td><td>1</td><td>0.250</td><td>10</td><td>50</td><td>70</td><td>-20</td></tr><tr><td>11</td><td>通訊</td><td>3</td><td>9</td><td>0</td><td>0.250</td><td>9</td><td>27</td><td>56</td><td>-29</td></tr><tr><td>12</td><td>造船</td><td>3</td><td>9</td><td>0</td><td>0.250</td><td>9</td><td>35</td><td>70</td><td>-35</td></tr><tr><td>13</td><td>電機</td><td>0</td><td>12</td><td>0</td><td>0.000</td><td>0</td><td>21</td><td>113</td><td>-92</td></tr></table>";
+    }
+
+    function c() {
+        document.getElementById("demo").innerHTML = "";
+        var sel = "<option value='1'>資工</option>";
+        sel += "<option value='2'>商船</option>";
+        sel += "<option value='3'>運輸</option>";
+        sel += "<option value='4'>航管</option>";
+        sel += "<option value='5'>電機</option>";
+        sel += "<option value='6'>輪機</option>";
+        sel += "<option value='7'>海洋</option>";
+        sel += "<option value='8'>養殖</option>";
+        sel += "<option value='9'>環漁</option>";
+        sel += "<option value='10'>機械</option>";
+        sel += "<option value='11'>造船</option>";
+        sel += "<option value='12'>河工</option>";
+        sel += "<option value='13'>通訊</option>";
+        document.getElementById("demo").innerHTML = "<p><br></p><form><select  id='s' multiple>" + sel + "</select></form>";
+        document.getElementById("demo").innerHTML += "<button class='button' id = 'go'onclick = 'out()' style='vertical-align:middle'><span>確認</span></button>";
+
+        document.getElementById("demo").innerHTML += "<div id='out'></div>";
+
+    }
+
+    function out() {
+        var s = document.getElementById("s").value;
+        var p = document.getElementById("out");
+        if (s == 1) {
+            p.innerHTML = "<h2>資訊工程學系</h2>";
+            p.innerHTML += '<img id="cs" style="z-index:1; width:150px; height: 150px;" src="資工logo.jpg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>5</td><td>25</td><td>0.666</td><td>3.45</td></tr>";
+        } else if (s == 2) {
+            p.innerHTML = "<h2>商船學系</h2>";
+            p.innerHTML += '<img id="mmd" style="z-index:1; width:150px; height: 150px;" src="商船logo.jpg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>6</td><td>21</td><td>0.583</td><td>4.54</td></tr>";
+        } else if (s == 3) {
+            p.innerHTML = "<h2>運輸科學系</h2>";
+            p.innerHTML += '<img id="tps" style="z-index:1; width:150px; height: 150px;" src="運輸logo.png">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>3</td><td>27</td><td>0.750</td><td>2.67</td></tr>";
+        } else if (s == 4) {
+            p.innerHTML = "<h2>航運管理學系</h2>";
+            p.innerHTML += '<img id="stm" style="z-index:1; width:150px; height: 165px;" src="航管logo.png">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>2</td><td>30</td><td>0.833</td><td>2.03</td></tr>";
+        } else if (s == 5) {
+            p.innerHTML = "<h2>電機工程學系</h2>";
+            p.innerHTML += '<img id="ee" style="z-index:1; width:150px; height: 150px;" src="電機logo.jpg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>13</td><td>0</td><td>0.000</td><td>21.18</td></tr>";
+        } else if (s == 6) {
+            p.innerHTML = "<h2>輪機工程學系</h2>";
+            p.innerHTML += '<img id="dme" style="z-index:1; width:150px; height: 150px;" src="輪機logo.jpg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>10</td><td>10</td><td>0.250</td><td>10.50</td></tr>";
+        } else if (s == 7) {
+            p.innerHTML = "<h2>海洋環境科學系</h2>";
+            p.innerHTML += '<img id="mei" style="z-index:1; width:160px; height: 150px;" src="海洋logo.jpg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>8</td><td>12</td><td>0.333</td><td>9.00</td></tr>";
+        } else if (s == 8) {
+            p.innerHTML = "<h2>水產養殖學系</h2>";
+            p.innerHTML += '<img id="qaua" style="z-index:1; width:250px; height: 150px;" src="養殖logo.jpg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>7</td><td>15</td><td>0.416</td><td>9.45</td></tr>";
+        } else if (s == 9) {
+            p.innerHTML = "<h2>環境生物與漁業科學學系</h2>";
+            p.innerHTML += '<img id="fd" style="z-index:1; width:200px; height: 150px;" src="環漁logo.png">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>9</td><td>12</td><td>0.333</td><td>6.60</td></tr>";
+        } else if (s == 10) {
+            p.innerHTML = "<h2>機械與機電工程學系</h2>";
+            p.innerHTML += '<img id="mme" style="z-index:1; width:150px; height: 150px;" src="機械logo.jpeg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>4</td><td>26</td><td>0.666</td><td>4.80</td></tr>";
+        } else if (s == 11) {
+            p.innerHTML = "<h2>系統工程暨造船學系</h2>";
+            p.innerHTML += '<img id="se" style="z-index:1; width:250px; height: 150px;" src="造船logo.jpg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>12</td><td>9</td><td>0.250</td><td>10.50</td></tr>";
+        } else if (s == 12) {
+            p.innerHTML = "<h2>河海工程學系</h2>";
+            p.innerHTML += '<img id="hre" style="z-index:1; width:150px; height: 150px;" src="河工logo.jpeg">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>1</td><td>33</td><td>0.916</td><td>2.55</td></tr>";
+        } else if (s == 13) {
+            p.innerHTML = "<h2>通訊與導航工程學系</h2>";
+            p.innerHTML += '<img id="cnce" style="z-index:1; width:450px; height: 150px;" src="通訊logo.png">';
+            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
+            document.getElementById("customers").innerHTML += "<tr><td>11</td><td>9</td><td>0.250</td><td>9.64</td></tr>";
+        }
+    }
+
+    function d() {}
+
+    function e() {}
+
+    function f() {
+        document.getElementById("demo").innerHTML = "<input>";
+    }
+    window.addEventListener("load", start, false);
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    <div style="text-align:center;" class="top1">
+        <p class="top1"><br>
+        </p>
+        <img id="school" style="z-index:1; width:150px; height: 150px;" src="海大校徽.gif" title="返回首頁">
+        <h1>海大壘球聯盟</h1>
+    </div>
+    <div class="example" id="a1" style=" cursor: pointer;">>
+        <nav id="a" ; class="fas fa-bars"> 比分/賽程</nav>
+    </div>
+    <div class="example" id="b1" style=" cursor: pointer;">>
+        <nav id="b" ; class="fas fa-signal"> 戰績</nav>
+    </div>
+    <div class="example" id="c1" style=" cursor: pointer;">>
+        <nav id="c" ; class="fas fa-sitemap"> 球隊資訊</nav>
+        </nav>
+    </div>
+    <div class="example" id="d1" style=" cursor: pointer;">>
+        <nav id="d" ; class="fas fa-address-card"> 球員資訊</nav>
+        </nav>
+    </div>
+    <div class="example" id="e1" style=" cursor: pointer;">>
+        <nav id="e" ; class="fab fa-facebook-square"><a href="https://www.facebook.com/ntousoftball/" target="_blank"> FB粉專</a></nav>
+        </nav>
+    </div>
+    <div class="example" id="f1" style=" cursor: pointer;">>
+        <nav id="f" ; class="fas fa-wrench"> 管理員專區</nav>
+        </nav>
+    </div>
+    <div id="demo" align="center">
+        <p><br></p>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500"
+            style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> </div>
+</body>
+
 </html>
-
