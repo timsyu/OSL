@@ -164,6 +164,7 @@
         
         select {
             width: 130px;
+            font-size: 20px;
         }
         
         @media screen and (max-width: 600px) {
@@ -226,7 +227,7 @@
         sel += "<option value='11'>造船</option>";
         sel += "<option value='12'>河工</option>";
         sel += "<option value='13'>通訊</option>";
-        document.getElementById("demo").innerHTML = "<p><br></p><form><select  id='s' multiple>" + sel + "</select></form>";
+        document.getElementById("demo").innerHTML = "<p><br></p><form><select  id='s'>" + sel + "</select></form>";
         document.getElementById("demo").innerHTML += "<button class='button' id = 'go'onclick = 'out()' style='vertical-align:middle'><span>確認</span></button>";
 
         document.getElementById("demo").innerHTML += "<div id='out'></div>";
