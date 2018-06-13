@@ -59,17 +59,23 @@
                            color: black; }
          nav ul li:hover { background-color: PowderBlue; }
          nav a               {color:White; }
+         
 		 div.example {
 						   font-weight: bold;
                            font-family:Comic Sans MS,arial,helvetica,sans-serif;
                            color: white;
+                           font-size:20px;
                            border: 2px solid #00B2B2;
                            text-align: center;
                            background-color: #00B2B2;
 						   float:left;
+                           padding: 10px;
 						   width: 16.666%;
-						   box-sizing: border-box;
+                           box-sizing: border-box;
          }
+      div.example:hover:not(.active) {
+          background-color: #00A3A3;
+      }
       div.demo{
       }
       div.top1 {
@@ -81,7 +87,7 @@
       div.b{
           padding: 10px;
       }
-      dic.score{
+      div.score{
           width:80%;
           background-color:gray;
       }
