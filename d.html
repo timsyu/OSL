@@ -179,6 +179,7 @@
     </style>
     <link href="海大校徽.ico" rel="SHORTCUT ICON">
 </head>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script>
     function start() {
         document.getElementById("a1").addEventListener("click", a);
@@ -208,7 +209,84 @@
 
     function d() {
         document.location.href = "d.html";
+
     }
+
+
+    function output() {
+        // alert("out");
+        ;
+        var name = '';
+
+        var s = document.getElementById("s").value;
+        var p = document.getElementById("out");
+        p.innerHTML = "<table id='customers'></table>"
+        if (s == 1) { //%E8%B3%87%E5%B7%A5
+            name = "資工";
+        } else if (s == 2) { //%E5%95%86%E8%88%B9
+            name = "商船";
+        } else if (s == 3) { //%E9%81%8B%E8%BC%B8%0D%0A
+            name = "運輸";
+        } else if (s == 4) { //%E8%88%AA%E7%AE%A1%0D%0A
+            name = "航管";
+        } else if (s == 5) { //%E9%9B%BB%E6%A9%9F%0D%0A
+            name = "電機";
+        } else if (s == 6) { //%E8%BC%AA%E6%A9%9F%0D%0A
+            name = "輪機";
+        } else if (s == 7) { //%E6%B5%B7%E6%B4%8B
+            name = "海洋";
+        } else if (s == 8) { //%E9%A4%8A%E6%AE%96
+            name = "養殖";
+        } else if (s == 9) { //%E7%92%B0%E6%BC%81
+            name = "環漁";
+        } else if (s == 10) { //%E6%A9%9F%E6%A2%B0
+            name = "機械";
+        } else if (s == 11) { //%E9%80%A0%E8%88%B9
+            name = "造船";
+        } else if (s == 12) { //%E6%B2%B3%E5%B7%A5
+            name = "河工";
+        } else if (s == 13) { //%E9%80%9A%E8%A8%8A
+            name = "通訊";
+        }
+        var sheetID = "1aZbMqzIqGu7qBNspWVwfucomPf_6vxCP2_RcSBSqLZI"; // 試算表代號
+        var gid = "0"; // 工作表代號
+        var sql = encodeURI("select * where A ='" + name + "'");
+        var callback = "callback"; // 回呼函數名稱
+        var url = "https://spreadsheets.google.com/tq?tqx=responseHandler:" + callback + "&tq=" + sql + "&key=" + sheetID + "&gid=" + gid;
+        console.log(url);
+        $.getScript(url);
+
+
+
+
+    }
+
+    function callback(json) {
+
+        var rowArray = json.table.rows;
+        console.log(rowArray); //印出回傳結果，可仔細觀察一下Google試算表回傳之JSON內容
+        var rowLength = rowArray.length;
+
+        var html = "<tr><th>科系</th><th>背號</th><th>打點</th><th>安打數</th><th>打席</th></tr>";
+
+        for (var i = 0; i < rowLength; i++) {
+
+            var dataGroup = rowArray[i].c;
+            var dataLength = dataGroup.length;
+
+            html += "<tr>";
+
+            for (var j = 0; j < 5; j++) {
+                if (!dataGroup[j]) {
+                    html += "<td></td>";
+                    continue; //預防空的field
+                }
+                html += "<td>" + (dataGroup[j].f || dataGroup[j].v || " ") + "</td>"; //有f印f，沒f印v，不然印空字串
+            }
+            html += "</tr>";
+        }
+        $("#customers").html(html);
+    };
 
     function e() {}
 
@@ -339,7 +417,7 @@
             <option value='13'>通訊</option>
             </select>
         </form>
-        <button class='button' id='go' onclick='player()' style='vertical-align:middle'><span>確認</span></button>
+        <button class='button' id='go' onclick='output()' style='vertical-align:middle'><span>確認</span></button>
         <div id='out'></div>
     </div>
 
