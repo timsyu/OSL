@@ -210,6 +210,12 @@
         document.location.href = "d.html";
     }
 
+    function e() {}
+
+    function f() {
+        document.getElementById("demo").innerHTML = '';
+    }
+
     function player() {
         var s = document.getElementById("s").value;
         var p = document.getElementById("out");
@@ -281,11 +287,6 @@
         }
     }
 
-    function e() {}
-
-    function f() {
-        document.getElementById("demo").innerHTML = '';
-    }
     window.addEventListener("load", start, false);
 </script>
 
@@ -322,8 +323,26 @@
     </div>
     <div id="demo" align="center">
         <p><br></p>
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500"
-            style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> </div>
+        <form><select id='s'>
+            <option value='1'>資工</option>
+            <option value='2'>商船</option>
+            <option value='3'>運輸</option>
+            <option value='4'>航管</option>
+            <option value='5'>電機</option>
+            <option value='6'>輪機</option>
+            <option value='7'>海洋</option>
+            <option value='8'>養殖</option>
+            <option value='9'>環漁</option>
+            <option value='10'>機械</option>
+            <option value='11'>造船</option>
+            <option value='12'>河工</option>
+            <option value='13'>通訊</option>
+            </select>
+        </form>
+        <button class='button' id='go' onclick='player()' style='vertical-align:middle'><span>確認</span></button>
+        <div id='out'></div>
+    </div>
+
 </body>
 
 </html>

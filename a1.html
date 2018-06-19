@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        海大壘球聯盟
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style type="text/css">
+        #customers {
+            border-collapse: collapse;
+            font-size: 2vw;
+            width: 90%;
+        }
+        
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+        
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #009494;
+            color: white;
+        }
+        
+        p.top1 {
+            background-color: #282828;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: White;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "malgun gothic", simhei;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav:hover ul {
+            display: block;
+        }
+        
+        nav ul li {
+            font-family: "malgun gothic", simhei;
+            border-top: 2px solid Navy;
+            background-color: white;
+            width: 100%;
+            color: black;
+        }
+        
+        nav ul li:hover {
+            background-color: PowderBlue;
+        }
+        
+        nav a {
+            font-family: "malgun gothic", simhei;
+            color: White;
+        }
+        
+        div.example {
+            font-family: "malgun gothic", simhei;
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+            border: 2px solid #00B2B2;
+            text-align: center;
+            background-color: #00B2B2;
+            float: left;
+            padding: 10px;
+            width: 16.666%;
+            box-sizing: border-box;
+        }
+        
+        div.example:hover:not(.active) {
+            background-color: #00A3A3;
+        }
+        /*div.demo {}*/
+        
+        div.top1 {
+            background-color: #282828;
+            margin: 0;
+            padding: 0;
+        }
+        
+        div.b {
+            padding: 10px;
+        }
+        
+        div.score {
+            width: 80%;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #008866;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 5px;
+            width: 130px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        select {
+            width: 130px;
+            font-size: 20px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            div.example {
+                font-weight: bold;
+                color: white;
+                border: 2px solid #00B2B2;
+                text-align: center;
+                background-color: #00B2B2;
+                float: middle;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+    <link href="海大校徽.ico" rel="SHORTCUT ICON">
+</head>
+<script>
+    function start() {
+        document.getElementById("a1").addEventListener("click", a);
+        document.getElementById("b1").addEventListener("click", b);
+        document.getElementById("c1").addEventListener("click", c);
+        document.getElementById("d1").addEventListener("click", d);
+        document.getElementById("e1").addEventListener("click", e);
+        document.getElementById("f1").addEventListener("click", f);
+        document.getElementById("a2").addEventListener("click", a2);
+        document.getElementById("school").addEventListener("click", school);
+    }
+
+    function school() {
+        document.location.href = "index.html";
+    }
+
+    function a2() {
+        document.location.href = "a.html";
+    }
+
+    function a() {
+        document.location.href = "a.html";
+    }
+
+    function b() {
+        document.location.href = "b.html";
+    }
+
+    function c() {
+        document.location.href = "c.html";
+    }
+
+    function d() {
+        document.location.href = "d.html";
+    }
+
+    function e() {}
+
+    function f() {
+        document.getElementById("demo").innerHTML = '';
+    }
+    window.addEventListener("load", start, false);
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    <div style="text-align:center;" class="top1">
+        <p class="top1"><br>
+        </p>
+        <img id="school" style="z-index:1; width:150px; height: 150px;" src="海大校徽.gif" title="返回首頁">
+        <h1>海大壘球聯盟</h1>
+    </div>
+    <div class="example" id="a1" style=" cursor: pointer;">
+        <nav id="a" ; class="fas fa-bars" ;font-family: "malgun gothic", simhei;> 比分/賽程</nav>
+    </div>
+    <div class="example" id="b1" style=" cursor: pointer;">
+        <nav id="b" ; class="fas fa-signal" ;font-family: "malgun gothic", simhei;> 戰績</nav>
+    </div>
+    <div class="example" id="c1" style=" cursor: pointer;">
+        <nav id="c" ; class="fas fa-sitemap" ;font-family: "malgun gothic", simhei;> 球隊資訊</nav>
+        </nav>
+    </div>
+    <div class="example" id="d1" style=" cursor: pointer;">
+        <nav id="d" ; class="fas fa-address-card" ;font-family: "malgun gothic", simhei;> 球員資訊</nav>
+        </nav>
+    </div>
+    <div class="example" id="e1" style=" cursor: pointer;">
+        <nav id="e" ; class="fab fa-facebook-square"><a href="https://www.facebook.com/ntousoftball/" target="_blank"> FB粉專</a></nav>
+        </nav>
+    </div>
+    <div class="example" id="f1" style=" cursor: pointer;">
+        <nav id="f" ; class="fas fa-wrench" ;font-family: "malgun gothic", simhei;> 管理員專區</nav>
+        </nav>
+    </div>
+    <div id="demo" align="center">
+        <p><br><br></p>
+        <div>
+            <h1 style="color:#111;"><i class="fas fa-arrow-alt-circle-left" title="第六屆OSL海洋聯賽  季後賽" id="a2" style=" cursor: pointer;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第六屆OSL海洋聯賽 例行賽&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-arrow-alt-circle-right"></i></h1>
+            <br>
+            <table border="1" cellspacing="0" cellpadding="2" style="margin:0;border-collapse:collapse;text-align:center;font:normal 10pt/100% 'Comic Sans MS',monospace,'Courier New','MS Gothic',Consolas;background:#111;color:#AAA;border:1px solid #555;white-space:nowrap">
+                <tbody>
+                    <tr>
+                        <td nowrap="NOWRAP" style="letter-spacing:1px;width:90px;height:22px;background:#111;">例行賽#77</td>
+                        <td style="width:27px">1</td>
+                        <td style="width:27px">2</td>
+                        <td style="width:27px">3</td>
+                        <td style="width:27px">4</td>
+                        <td style="width:27px">5</td>
+                        <td style="width:27px">6</td>
+                        <td style="width:27px">7</td>
+                        <td style="width:27px;color:white;font-weight:bold" title="得分">R</td>
+                        <td style="width:27px" title="安打">H</td>
+                        <td style="width:27px" title="失誤">E</td>
+                    </tr>
+                    <tr style="text-shadow:2px 2px 6px black;background:#333;color:white">
+                        <td style="font-family:'微軟正黑體';background:#111;height:22px;color:#EEE">
+                            <div style="display:inline-block;text-indent:0;min-width:14px;padding:0 2px;text-align:center;font:normal 8pt Consolas;white-space:nowrap;background: rgb(8, 14, 26);color:white;border-radius:3px;;;font-size:10pt;padding:0 8px 1px;box-shadow:2px 2px 2px rgba(0,0,0,.25)">航管</div>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td style="background:#111;color:yellow">4</td>
+                        <td style="width:27px"> </td>
+                        <td style="width:27px"> </td>
+                    </tr>
+                    <tr style="text-shadow:2px 2px 6px black;background:#333;color:white">
+                        <td style="font-family:'微軟正黑體';background:#111;height:22px;color:#EEE">
+                            <div style="display:inline-block;text-indent:0;min-width:14px;padding:0 2px;text-align:center;font:normal 8pt Consolas;white-space:nowrap;background: #7CE;color:white;border-radius:3px;;;font-size:10pt;padding:0 8px 1px;box-shadow:2px 2px 2px rgba(0,0,0,.25);border:1px solid #666">河工</div>
+                        </td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td style="background:#111;color:yellow">1</td>
+                        <td style="width:27px"> </td>
+                        <td style="width:27px"> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><br><br></p>
+            <table border="1" cellspacing="0" cellpadding="2" style="margin:0;border-collapse:collapse;text-align:center;font:normal 10pt/100% 'Comic Sans MS',monospace,'Courier New','MS Gothic',Consolas;background:#111;color:#AAA;border:1px solid #555;white-space:nowrap">
+                <tbody>
+                    <tr>
+                        <td nowrap="NOWRAP" style="letter-spacing:1px;width:90px;height:22px;background:#111;">例行賽#75</td>
+                        <td style="width:27px">1</td>
+                        <td style="width:27px">2</td>
+                        <td style="width:27px">3</td>
+                        <td style="width:27px">4</td>
+                        <td style="width:27px">5</td>
+                        <td style="width:27px">6</td>
+                        <td style="width:27px">7</td>
+                        <td style="width:27px;color:white;font-weight:bold" title="得分">R</td>
+                        <td style="width:27px" title="安打">H</td>
+                        <td style="width:27px" title="失誤">E</td>
+                    </tr>
+                    <tr style="text-shadow:2px 2px 6px black;background:#333;color:white">
+                        <td style="font-family:'微軟正黑體';background:#111;height:22px;color:#EEE">
+                            <div style="display:inline-block;text-indent:0;min-width:14px;padding:0 2px;text-align:center;font:normal 8pt Consolas;white-space:nowrap;background: rgb(228, 111, 15);color:white;border-radius:3px;;;font-size:10pt;padding:0 8px 1px;box-shadow:2px 2px 2px rgba(0,0,0,.25)">通訊</div>
+                        </td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>/</td>
+                        <td style="background:#111;color:yellow">2</td>
+                        <td style="width:27px"> </td>
+                        <td style="width:27px"> </td>
+                    </tr>
+                    <tr style="text-shadow:2px 2px 6px black;background:#333;color:white">
+                        <td style="font-family:'微軟正黑體';background:#111;height:22px;color:#EEE">
+                            <div style="display:inline-block;text-indent:0;min-width:14px;padding:0 2px;text-align:center;font:normal 8pt Consolas;white-space:nowrap;background: rgb(22, 7, 109);color:white;border-radius:3px;;;font-size:10pt;padding:0 8px 1px;box-shadow:2px 2px 2px rgba(0,0,0,.25);border:1px solid #666">資工</div>
+                        </td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>/</td>
+                        <td style="background:#111;color:yellow">3</td>
+                        <td style="width:27px"> </td>
+                        <td style="width:27px"> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><br><br></p>
+            <table border="1" cellspacing="0" cellpadding="2" style="margin:0;border-collapse:collapse;text-align:center;font:normal 10pt/100% 'Comic Sans MS',monospace,'Courier New','MS Gothic',Consolas;background:#111;color:#AAA;border:1px solid #555;white-space:nowrap">
+                <tbody>
+                    <tr>
+                        <td nowrap="NOWRAP" style="letter-spacing:1px;width:90px;height:22px;background:#111;">例行賽#73</td>
+                        <td style="width:27px">1</td>
+                        <td style="width:27px">2</td>
+                        <td style="width:27px">3</td>
+                        <td style="width:27px">4</td>
+                        <td style="width:27px">5</td>
+                        <td style="width:27px">6</td>
+                        <td style="width:27px">7</td>
+                        <td style="width:27px;color:white;font-weight:bold" title="得分">R</td>
+                        <td style="width:27px" title="安打">H</td>
+                        <td style="width:27px" title="失誤">E</td>
+                    </tr>
+                    <tr style="text-shadow:2px 2px 6px black;background:#333;color:white">
+                        <td style="font-family:'微軟正黑體';background:#111;height:22px;color:#EEE">
+                            <div style="display:inline-block;text-indent:0;min-width:14px;padding:0 2px;text-align:center;font:normal 8pt Consolas;white-space:nowrap;background: rgb(216, 10, 28);color:white;border-radius:3px;;;font-size:10pt;padding:0 8px 1px;box-shadow:2px 2px 2px rgba(0,0,0,.25)">輪機</div>
+                        </td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td style="background:#111;color:yellow">2</td>
+                        <td style="width:27px"> </td>
+                        <td style="width:27px"> </td>
+                    </tr>
+                    <tr style="text-shadow:2px 2px 6px black;background:#333;color:white">
+                        <td style="font-family:'微軟正黑體';background:#111;height:22px;color:#EEE">
+                            <div style="display:inline-block;text-indent:0;min-width:14px;padding:0 2px;text-align:center;font:normal 8pt Consolas;white-space:nowrap;background: rgb(11, 5, 48);color:white;border-radius:3px;;;font-size:10pt;padding:0 8px 1px;box-shadow:2px 2px 2px rgba(0,0,0,.25);border:1px solid #666">商船</div>
+                        </td>
+                        <td>0</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td style="background:#111;color:yellow">9</td>
+                        <td style="width:27px"> </td>
+                        <td style="width:27px"> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><br><br></p>
+            <table border="1" cellspacing="0" cellpadding="2" style="margin:0;border-collapse:collapse;text-align:center;font:normal 10pt/100% 'Comic Sans MS',monospace,'Courier New','MS Gothic',Consolas;background:#111;color:#AAA;border:1px solid #555;white-space:nowrap">
+                <tbody>
+                    <tr>
+                        <td nowrap="NOWRAP" style="letter-spacing:1px;width:90px;height:22px;background:#111;">例行賽#78</td>
+                        <td style="width:27px">1</td>
+                        <td style="width:27px">2</td>
+                        <td style="width:27px">3</td>
+                        <td style="width:27px">4</td>
+                        <td style="width:27px">5</td>
+                        <td style="width:27px">6</td>
+                        <td style="width:27px">7</td>
+                        <td style="width:27px;color:white;font-weight:bold" title="得分">R</td>
+                        <td style="width:27px" title="安打">H</td>
+                        <td style="width:27px" title="失誤">E</td>
+                    </tr>
+                    <tr style="text-shadow:2px 2px 6px black;background:#333;color:white">
+                        <td style="font-family:'微軟正黑體';background:#111;height:22px;color:#EEE">
+                            <div style="display:inline-block;text-indent:0;min-width:14px;padding:0 2px;text-align:center;font:normal 8pt Consolas;white-space:nowrap;background: rgb(2, 109, 20);color:white;border-radius:3px;;;font-size:10pt;padding:0 8px 1px;box-shadow:2px 2px 2px rgba(0,0,0,.25)">造船</div>
+                        </td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>/</td>
+                        <td style="background:#111;color:yellow">3</td>
+                        <td style="width:27px"> </td>
+                        <td style="width:27px"> </td>
+                    </tr>
+                    <tr style="text-shadow:2px 2px 6px black;background:#333;color:white">
+                        <td style="font-family:'微軟正黑體';background:#111;height:22px;color:#EEE">
+                            <div style="display:inline-block;text-indent:0;min-width:14px;padding:0 2px;text-align:center;font:normal 8pt Consolas;white-space:nowrap;background: rgb(219, 223, 14);color:white;border-radius:3px;;;font-size:10pt;padding:0 8px 1px;box-shadow:2px 2px 2px rgba(0,0,0,.25);border:1px solid #666">運輸</div>
+                        </td>
+                        <td>0</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td style="background:#111;color:yellow">7</td>
+                        <td style="width:27px"> </td>
+                        <td style="width:27px"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><br></p>
+    </div>
+
+</body>
+
+</html>

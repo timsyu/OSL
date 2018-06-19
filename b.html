@@ -210,78 +210,8 @@
         document.location.href = "d.html";
     }
 
-    function player() {
-        var s = document.getElementById("s").value;
-        var p = document.getElementById("out");
-        if (s == 1) {
-            p.innerHTML = "<h2>資訊工程學系</h2>";
-            p.innerHTML += '<img id="cs" style="z-index:1; width:150px; height: 150px;" src="資工logo.jpg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>5</td><td>25</td><td>0.666</td><td>3.45</td></tr>";
-        } else if (s == 2) {
-            p.innerHTML = "<h2>商船學系</h2>";
-            p.innerHTML += '<img id="mmd" style="z-index:1; width:150px; height: 150px;" src="商船logo.jpg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>6</td><td>21</td><td>0.583</td><td>4.54</td></tr>";
-        } else if (s == 3) {
-            p.innerHTML = "<h2>運輸科學系</h2>";
-            p.innerHTML += '<img id="tps" style="z-index:1; width:150px; height: 150px;" src="運輸logo.png">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>3</td><td>27</td><td>0.750</td><td>2.67</td></tr>";
-        } else if (s == 4) {
-            p.innerHTML = "<h2>航運管理學系</h2>";
-            p.innerHTML += '<img id="stm" style="z-index:1; width:150px; height: 165px;" src="航管logo.png">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>2</td><td>30</td><td>0.833</td><td>2.03</td></tr>";
-        } else if (s == 5) {
-            p.innerHTML = "<h2>電機工程學系</h2>";
-            p.innerHTML += '<img id="ee" style="z-index:1; width:150px; height: 150px;" src="電機logo.jpg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>13</td><td>0</td><td>0.000</td><td>21.18</td></tr>";
-        } else if (s == 6) {
-            p.innerHTML = "<h2>輪機工程學系</h2>";
-            p.innerHTML += '<img id="dme" style="z-index:1; width:150px; height: 150px;" src="輪機logo.jpg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>10</td><td>10</td><td>0.250</td><td>10.50</td></tr>";
-        } else if (s == 7) {
-            p.innerHTML = "<h2>海洋環境科學系</h2>";
-            p.innerHTML += '<img id="mei" style="z-index:1; width:160px; height: 150px;" src="海洋logo.jpg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>8</td><td>12</td><td>0.333</td><td>9.00</td></tr>";
-        } else if (s == 8) {
-            p.innerHTML = "<h2>水產養殖學系</h2>";
-            p.innerHTML += '<img id="qaua" style="z-index:1; width:250px; height: 150px;" src="養殖logo.jpg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>7</td><td>15</td><td>0.416</td><td>9.45</td></tr>";
-        } else if (s == 9) {
-            p.innerHTML = "<h2>環境生物與漁業科學學系</h2>";
-            p.innerHTML += '<img id="fd" style="z-index:1; width:200px; height: 150px;" src="環漁logo.png">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>9</td><td>12</td><td>0.333</td><td>6.60</td></tr>";
-        } else if (s == 10) {
-            p.innerHTML = "<h2>機械與機電工程學系</h2>";
-            p.innerHTML += '<img id="mme" style="z-index:1; width:150px; height: 150px;" src="機械logo.jpeg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>4</td><td>26</td><td>0.666</td><td>4.80</td></tr>";
-        } else if (s == 11) {
-            p.innerHTML = "<h2>系統工程暨造船學系</h2>";
-            p.innerHTML += '<img id="se" style="z-index:1; width:250px; height: 150px;" src="造船logo.jpg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>12</td><td>9</td><td>0.250</td><td>10.50</td></tr>";
-        } else if (s == 12) {
-            p.innerHTML = "<h2>河海工程學系</h2>";
-            p.innerHTML += '<img id="hre" style="z-index:1; width:150px; height: 150px;" src="河工logo.jpeg">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>1</td><td>33</td><td>0.916</td><td>2.55</td></tr>";
-        } else if (s == 13) {
-            p.innerHTML = "<h2>通訊與導航工程學系</h2>";
-            p.innerHTML += '<img id="cnce" style="z-index:1; width:700px; height: 150px;" src="通訊logo.png">';
-            p.innerHTML += "<table id = 'customers'><tr><th>排名</th><th>積分</th><th>勝率</th><th>防禦率</th></tr><tr></tr></table>";
-            document.getElementById("customers").innerHTML += "<tr><td>11</td><td>9</td><td>0.250</td><td>9.64</td></tr>";
-        }
-    }
-
     function e() {}
+
 
     function f() {
         document.getElementById("demo").innerHTML = '';
@@ -322,8 +252,179 @@
     </div>
     <div id="demo" align="center">
         <p><br></p>
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fntousoftball%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500"
-            style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> </div>
+        <p><br></p>
+        <table id='customers'>
+            <tr>
+                <th>排名</th>
+                <th>隊名</th>
+                <th>勝</th>
+                <th>敗</th>
+                <th>和</th>
+                <th>勝率</th>
+                <th>積分</th>
+                <th>得分</th>
+                <th>失分</th>
+                <th>得分差</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>河工</td>
+                <td>11</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0.916</td>
+                <td>33</td>
+                <td>68</td>
+                <td>17</td>
+                <td>51</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>航管</td>
+                <td>10</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0.833</td>
+                <td>30</td>
+                <td>76</td>
+                <td>27</td>
+                <td>49</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>運輸</td>
+                <td>9</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0.750</td>
+                <td>27</td>
+                <td>73</td>
+                <td>38</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>機械</td>
+                <td>8</td>
+                <td>2</td>
+                <td>2</td>
+                <td>0.666</td>
+                <td>26</td>
+                <td>62</td>
+                <td>32</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>資工</td>
+                <td>8</td>
+                <td>3</td>
+                <td>1</td>
+                <td>0.666</td>
+                <td>25</td>
+                <td>47</td>
+                <td>49</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>商船</td>
+                <td>7</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0.583</td>
+                <td>21</td>
+                <td>60</td>
+                <td>26</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>養殖</td>
+                <td>5</td>
+                <td>7</td>
+                <td>0</td>
+                <td>0.416</td>
+                <td>15</td>
+                <td>58</td>
+                <td>63</td>
+                <td>-5</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>海洋</td>
+                <td>4</td>
+                <td>8</td>
+                <td>0</td>
+                <td>0.333</td>
+                <td>12</td>
+                <td>45</td>
+                <td>60</td>
+                <td>-15</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>環漁</td>
+                <td>4</td>
+                <td>8</td>
+                <td>0</td>
+                <td>0.333</td>
+                <td>12</td>
+                <td>33</td>
+                <td>44</td>
+                <td>-11</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>輪機</td>
+                <td>3</td>
+                <td>8</td>
+                <td>1</td>
+                <td>0.250</td>
+                <td>10</td>
+                <td>50</td>
+                <td>70</td>
+                <td>-20</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>通訊</td>
+                <td>3</td>
+                <td>9</td>
+                <td>0</td>
+                <td>0.250</td>
+                <td>9</td>
+                <td>27</td>
+                <td>56</td>
+                <td>-29</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>造船</td>
+                <td>3</td>
+                <td>9</td>
+                <td>0</td>
+                <td>0.250</td>
+                <td>9</td>
+                <td>35</td>
+                <td>70</td>
+                <td>-35</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>電機</td>
+                <td>0</td>
+                <td>12</td>
+                <td>0</td>
+                <td>0.000</td>
+                <td>0</td>
+                <td>21</td>
+                <td>113</td>
+                <td>-92</td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 
 </html>
