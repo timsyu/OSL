@@ -49,7 +49,8 @@
         }
         
         body {
-            font-family: "malgun gothic", simhei;
+            font-family: 'Microsoft JhengHei', arial, helvetica, sans-serif;
+            font-weight: bold;
             margin: 0;
             padding: 0;
         }
@@ -66,7 +67,7 @@
         }
         
         nav ul li {
-            font-family: "malgun gothic", simhei;
+            font-family: 'Microsoft JhengHei', arial, helvetica, sans-serif;
             border-top: 2px solid Navy;
             background-color: white;
             width: 100%;
@@ -78,12 +79,12 @@
         }
         
         nav a {
-            font-family: "malgun gothic", simhei;
+            font-family: 'Microsoft JhengHei', arial, helvetica, sans-serif;
             color: White;
         }
         
         div.example {
-            font-family: "malgun gothic", simhei;
+            font-family: 'Microsoft JhengHei', arial, helvetica, sans-serif;
             font-weight: bold;
             color: white;
             font-size: 20px;
@@ -164,6 +165,11 @@
             font-size: 20px;
         }
         
+        input {
+            width: 130px;
+            font-size: 20px;
+        }
+        
         @media screen and (max-width: 600px) {
             div.example {
                 font-weight: bold;
@@ -212,9 +218,15 @@
 
     function e() {}
 
-
     function f() {
         document.location.href = "f.html";
+    }
+
+    function check() {
+        if (document.getElementById("password").value == "30cm") document.getElementById("demo").innerHTML = "<iframe src='https://docs.google.com/forms/d/e/1FAIpQLSd5GbBxCYRsxZgYlygPF_UE2xDbxcleDCXLEekw7w3d37UaiQ/viewform?embedded=true' width='700' height='520' frameborder='0' marginheight='0' marginwidth='0'>載入中…</iframe>";
+        else {
+            alert("error");
+        }
     }
     window.addEventListener("load", start, false);
 </script>
@@ -222,6 +234,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
+
     <div style="text-align:center;" class="top1">
         <p class="top1"><br>
         </p>
@@ -229,17 +242,17 @@
         <h1>海大壘球聯盟</h1>
     </div>
     <div class="example" id="a1" style=" cursor: pointer;">
-        <nav id="a" ; class="fas fa-bars" ;font-family: "malgun gothic", simhei;> 比分/賽程</nav>
+        <nav id="a" ; class="fas fa-bars" ;stlye="font-family: 'Microsoft JhengHei',arial,helvetica,sans-serif;font-weight: bold;"> 比分/賽程</nav>
     </div>
-    <div class="example" id="b1" style=" cursor: pointer; background-color: #00A3A3;">
-        <nav id="b" ; class="fas fa-signal" ;font-family: "malgun gothic", simhei;> 戰績</nav>
+    <div class="example" id="b1" style=" cursor: pointer;">
+        <nav id="b" ; class="fas fa-signal" ;stlye="font-family: 'Microsoft JhengHei',arial,helvetica,sans-serif;font-weight: bold;"> 戰績</nav>
     </div>
     <div class="example" id="c1" style=" cursor: pointer;">
-        <nav id="c" ; class="fas fa-sitemap" ;font-family: "malgun gothic", simhei;> 球隊資訊</nav>
+        <nav id="c" ; class="fas fa-sitemap" ;stlye="font-family: 'Microsoft JhengHei',arial,helvetica,sans-serif;font-weight: bold;"> 球隊資訊</nav>
         </nav>
     </div>
     <div class="example" id="d1" style=" cursor: pointer;">
-        <nav id="d" ; class="fas fa-address-card" ;font-family: "malgun gothic", simhei;> 球員資訊</nav>
+        <nav id="d" ; class="fas fa-address-card" ;stlye="font-family: 'Microsoft JhengHei',arial,helvetica,sans-serif; font-weight: bold;"> 球員資訊</nav>
         </nav>
     </div>
     <div class="example" id="e1" style=" cursor: pointer;">
@@ -247,184 +260,13 @@
         </nav>
     </div>
     <div class="example" id="f1" style=" cursor: pointer;">
-        <nav id="f" ; class="fas fa-wrench" ;font-family: "malgun gothic", simhei;> 管理員專區</nav>
+        <nav id="f" ; class="fas fa-wrench" ;stlye="font-family: 'Microsoft JhengHei',arial,helvetica,sans-serif; font-weight: bold;"> 管理員專區</nav>
         </nav>
     </div>
+    <p><br><br></p>
     <div id="demo" align="center">
-        <p><br></p>
-        <p><br></p>
-        <table id='customers'>
-            <tr>
-                <th>排名</th>
-                <th>隊名</th>
-                <th>勝</th>
-                <th>敗</th>
-                <th>和</th>
-                <th>勝率</th>
-                <th>積分</th>
-                <th>得分</th>
-                <th>失分</th>
-                <th>得分差</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>河工</td>
-                <td>11</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0.916</td>
-                <td>33</td>
-                <td>68</td>
-                <td>17</td>
-                <td>51</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>航管</td>
-                <td>10</td>
-                <td>2</td>
-                <td>0</td>
-                <td>0.833</td>
-                <td>30</td>
-                <td>76</td>
-                <td>27</td>
-                <td>49</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>運輸</td>
-                <td>9</td>
-                <td>3</td>
-                <td>0</td>
-                <td>0.750</td>
-                <td>27</td>
-                <td>73</td>
-                <td>38</td>
-                <td>35</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>機械</td>
-                <td>8</td>
-                <td>2</td>
-                <td>2</td>
-                <td>0.666</td>
-                <td>26</td>
-                <td>62</td>
-                <td>32</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>資工</td>
-                <td>8</td>
-                <td>3</td>
-                <td>1</td>
-                <td>0.666</td>
-                <td>25</td>
-                <td>47</td>
-                <td>49</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>商船</td>
-                <td>7</td>
-                <td>5</td>
-                <td>0</td>
-                <td>0.583</td>
-                <td>21</td>
-                <td>60</td>
-                <td>26</td>
-                <td>34</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>養殖</td>
-                <td>5</td>
-                <td>7</td>
-                <td>0</td>
-                <td>0.416</td>
-                <td>15</td>
-                <td>58</td>
-                <td>63</td>
-                <td>-5</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>海洋</td>
-                <td>4</td>
-                <td>8</td>
-                <td>0</td>
-                <td>0.333</td>
-                <td>12</td>
-                <td>45</td>
-                <td>60</td>
-                <td>-15</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>環漁</td>
-                <td>4</td>
-                <td>8</td>
-                <td>0</td>
-                <td>0.333</td>
-                <td>12</td>
-                <td>33</td>
-                <td>44</td>
-                <td>-11</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>輪機</td>
-                <td>3</td>
-                <td>8</td>
-                <td>1</td>
-                <td>0.250</td>
-                <td>10</td>
-                <td>50</td>
-                <td>70</td>
-                <td>-20</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>通訊</td>
-                <td>3</td>
-                <td>9</td>
-                <td>0</td>
-                <td>0.250</td>
-                <td>9</td>
-                <td>27</td>
-                <td>56</td>
-                <td>-29</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>造船</td>
-                <td>3</td>
-                <td>9</td>
-                <td>0</td>
-                <td>0.250</td>
-                <td>9</td>
-                <td>35</td>
-                <td>70</td>
-                <td>-35</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>電機</td>
-                <td>0</td>
-                <td>12</td>
-                <td>0</td>
-                <td>0.000</td>
-                <td>0</td>
-                <td>21</td>
-                <td>113</td>
-                <td>-92</td>
-            </tr>
-        </table>
+        <input id='password' placeholder="製作者的身高"><br><button class='button' id='go' onclick='check()' style='vertical-align:middle'><span>確認</span></button>
     </div>
-
 </body>
 
 </html>

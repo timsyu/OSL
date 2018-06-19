@@ -8,6 +8,17 @@
     </title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <style type="text/css">
+        .hi td {
+            margin: 0;
+            border-collapse: collapse;
+            text-align: center;
+            font: normal 10pt/100% 'Comic Sans MS', monospace, 'Courier New', 'MS Gothic', Consolas;
+            background: #111;
+            color: #AAA;
+            border: 1px solid #555;
+            white-space: nowrap;
+        }
+        
         #customers {
             border-collapse: collapse;
             font-size: 2vw;
@@ -179,6 +190,7 @@
     </style>
     <link href="海大校徽.ico" rel="SHORTCUT ICON">
 </head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>
     function start() {
         document.getElementById("a1").addEventListener("click", a);
@@ -189,6 +201,7 @@
         document.getElementById("f1").addEventListener("click", f);
         document.getElementById("a2").addEventListener("click", a2);
         document.getElementById("school").addEventListener("click", school);
+        a22();
     }
 
     function school() {
@@ -202,6 +215,67 @@
     function a() {
         document.location.href = "a.html";
     }
+
+    function a22() {
+        var p = document.getElementById("demo");
+        p.innerHTML += "<p><br><br></p><table class='hi' id='hi'></table>"
+        var sheetID = "1KRNrMQbcSzJdndzhgd4EAx73wOyTppvDrEN3Uh2mbnI"; // 試算表代號
+        var gid = "0"; // 工作表代號
+        var sql = '';
+        var callback = "callback2"; // 回呼函數名稱
+        var url = "https://spreadsheets.google.com/tq?tqx=responseHandler:" + callback + "&tq=" + sql + "&key=" + sheetID + "&gid=" + gid;
+        console.log(url);
+        $.getScript(url);
+
+
+    }
+
+    function callback2(json) {
+        var html = "";
+        var rowArray = json.table.rows;
+        console.log(rowArray); //印出回傳結果，可仔細觀察一下Google試算表回傳之JSON內容
+        var rowLength = rowArray.length;
+
+
+        for (var i = 0; i < rowLength; i++) {
+            var dataGroup = rowArray[i].c;
+            var dataLength = dataGroup.length;
+            var one = 1;
+            html += '<table border="1" cellspacing="0" cellpadding="2" ><tbody><tr>';
+            html += "<td nowrap='NOWRAP' style='letter-spacing:1px;width:90px;height:22px;background:#111; font-weight:bold;color:white'>"
+            html += (dataGroup[one].f || dataGroup[one].v || " ");
+            html += "</td><td style='width:27px;color:white'>1</td><td style='width:27px;  font-weight:bold;color:white'>2</td><td style='width:27px;  font-weight:bold;color:white'>3</td><td style='width:27px; font-weight:bold; color:white;'>4</td><td style='width:27px; font-weight:bold; color:white;'>5</td><td style='width:27px; font-weight:bold; color:white;'>6</td><td style='width:27px ; font-weight:bold; color:white;'>7</td><td style='width:27px ; color:white ;font-weight:bold;'>H</td><td style='width:27px;font-weight:bold; color:white;'  >E</td><td style='width:27px ;color:white; font-weight:bold;'>R</td></tr>";
+
+
+            html += "<tr>";
+            var r = 0;
+            for (var j = 2; j < 12; j++) {
+                if (!dataGroup[j]) {
+                    html += "<td></td>";
+                    continue; //預防空的field
+                }
+                var tem = (dataGroup[j].f || dataGroup[j].v || " ");
+                if (Math.floor(j) >= 3 && Math.floor(j) <= 9) r += Math.floor(tem);
+                html += "<td>" + tem + "</td>"; //有f印f，沒f印v，不然印空字串
+            }
+            html += "<td>" + r + "</td>";
+            html += "</tr>";
+            r = 0;
+            for (var j = 12; j < 22; j++) {
+                if (!dataGroup[j]) {
+                    html += "<td></td>";
+                    continue; //預防空的field
+                }
+                var tem = (dataGroup[j].f || dataGroup[j].v || " ");
+                if (Math.floor(j) >= 13 && Math.floor(j) <= 17) r += Math.floor(tem);
+                html += "<td>" + tem + "</td>"; //有f印f，沒f印v，不然印空字串
+            }
+            html += "<td>" + r + "</td>";
+            html += "</tr><tr></tr><p><br><br></p>";
+
+        }
+        $("#hi").html(html);
+    };
 
     function b() {
         document.location.href = "b.html";
@@ -218,7 +292,7 @@
     function e() {}
 
     function f() {
-        document.getElementById("demo").innerHTML = '';
+        document.location.href = "f.html";
     }
     window.addEventListener("load", start, false);
 </script>
